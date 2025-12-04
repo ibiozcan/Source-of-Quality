@@ -1,102 +1,202 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Source of Quality</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-        }
-        header {
-            padding: 40px 20px;
-            text-align: center;
-            background-color: #111;
-            border-bottom: 2px solid #c9a227;
-        }
-        h1 {
-            font-size: 2.8rem;
-            margin: 0;
-            color: #c9a227;
-        }
-        section {
-            padding: 60px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-        h2 {
-            color: #c9a227;
-            margin-bottom: 10px;
-        }
-        .card {
-            background-color: #111;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-left: 4px solid #c9a227;
-            border-radius: 6px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            border-top: 1px solid #333;
-            margin-top: 40px;
-            color: #777;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Source of Quality — Onafhankelijke energiespecialist</title>
+  <meta name="description" content="Source of Quality — Onafhankelijk energiespecialist, verbinder en vertrouwenspersoon. Kort, helder en resultaatgericht.">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --panel:#000000;
+      --text:#ffffff;
+      --muted:#bbbbbb;
+      --gold:#c9a227;
+      --maxw:1100px;
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:var(--text)}
+    a{color:var(--gold);text-decoration:none}
+    header{padding:28px 20px;border-bottom:1px solid rgba(0,0,0,0.05);background:var(--panel)}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:44px;height:44px;background:linear-gradient(180deg,var(--gold),#a6811b);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#000}
+    .nav{margin-left:auto;display:flex;gap:18px;align-items:center}
+    .cta{background:var(--gold);color:#000;padding:10px 14px;border-radius:10px;font-weight:600}
+
+    /* HERO */
+    .hero{padding:56px 0 36px}
+    .hero-grid{display:grid;grid-template-columns:1fr 380px;gap:32px;align-items:center}
+    .kicker{color:var(--gold);font-weight:700;margin-bottom:12px}
+    h1{font-size:36px;line-height:1.05;margin:0 0 14px;color:#000}
+    p.lead{color:#000;margin:0 0 18px}
+    .actions{display:flex;gap:12px;margin-top:18px}
+    .btn{padding:12px 16px;border-radius:10px;border:1px solid rgba(0,0,0,0.05);background:transparent;color:#000;font-weight:600}
+    .card-small{background:linear-gradient(180deg,rgba(0,0,0,0.02),rgba(0,0,0,0.01));padding:18px;border-radius:12px;border:1px solid rgba(0,0,0,0.03)}
+
+    /* SERVICES */
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+    .service{padding:18px;border-radius:10px;background:var(--panel);border:1px solid rgba(0,0,0,0.03)}
+    .service h3{margin:0 0 8px;color:var(--gold);font-size:16px}
+    .service p{margin:0;color:var(--muted);font-size:14px}
+
+    /* TESTIMONIALS */
+    .testimonials{margin-top:46px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .quote{padding:20px;border-radius:12px;background:linear-gradient(180deg,rgba(0,0,0,0.01),transparent);border:1px solid rgba(0,0,0,0.02)}
+    .quote p{margin:0;color:var(--muted)}
+    .meta{margin-top:10px;color:var(--text);font-weight:600}
+
+    /* FOOTER */
+    footer{padding:36px 20px;margin-top:48px;border-top:1px solid rgba(0,0,0,0.03);background:var(--panel)}
+    .small{color:var(--muted);font-size:13px}
+
+    /* Responsief */
+    @media (max-width:900px){
+      .hero-grid{grid-template-columns:1fr;}
+      .services{grid-template-columns:1fr}
+      .testimonials{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body>
-
-<header>
-    <h1>Source of Quality</h1>
-    <p>Onafhankelijke energiespecialist – Verbinder – Vertrouwenspersoon</p>
-</header>
-
-<section>
-    <h2>Wat ik doe</h2>
-    <div class="card">
-        <p>Ik help bedrijven met het nemen van slimme, transparante en toekomstbestendige energiebeslissingen. Geen lange verhalen, geen ruis — gewoon eerlijk advies en zichtbaar resultaat.</p>
+  <header>
+    <div class="container" style="display:flex;align-items:center">
+      <div class="brand">
+        <div class="logo">SoQ</div>
+        <div>
+          <div style="font-weight:700;color:var(--gold)">Source of Quality</div>
+          <div style="font-size:12px;color:var(--muted)">Onafhankelijke energiespecialist</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#diensten">Diensten</a>
+        <a href="#resultaat">Resultaat</a>
+        <a href="#over">Over</a>
+        <a class="cta" href="#contact">Plan gesprek</a>
+      </nav>
     </div>
-</section>
+  </header>
 
-<section>
-    <h2>Waarom Source of Quality?</h2>
-    <div class="card">
-        <ul>
-            <li>Onafhankelijk advies zonder verborgen agenda</li>
-            <li>Vertrouwenspersoon voor directie, bedrijven en partners</li>
-            <li>Verbindend tussen techniek, commercie en uitvoering</li>
-            <li>Focus op simpel, duidelijk en écht doen</li>
-        </ul>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="kicker">1 Source of Quality</div>
+          <h1>Onafhankelijke energiespecialist. Verbinder. Vertrouwenspersoon.</h1>
+          <p class="lead">Geen lange, stoffige verhalen. Gewoon doen. Ik help bedrijven met slimme, duidelijke energie-oplossingen — van inkoop tot batterijprojecten, zonder gedoe.</p>
+          <div class="actions">
+            <a class="btn" href="#contact">Plan vrijblijvend gesprek</a>
+            <a class="btn" href="#diensten">Bekijk diensten</a>
+          </div>
+
+          <div style="margin-top:22px;display:flex;gap:12px;align-items:center">
+            <div style="font-size:13px;color:var(--muted)">Klantlogo's</div>
+            <div style="display:flex;gap:8px;opacity:0.85">
+              <div style="width:36px;height:20px;background:#000;border-radius:4px"></div>
+              <div style="width:36px;height:20px;background:#000;border-radius:4px"></div>
+              <div style="width:36px;height:20px;background:#000;border-radius:4px"></div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card-small">
+          <h3 style="margin:0 0 8px;color:var(--gold)">Directe aanpak</h3>
+          <p style="margin:0 0 12px;color:var(--muted);font-size:14px">Snel & praktisch: snelle analyse, duidelijk advies en uitvoering met meetbaar resultaat.</p>
+          <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:14px">
+            <li>Onafhankelijk — geen leveranciersagenda</li>
+            <li>Vertrouwenspersoon voor directie</li>
+            <li>Verbindend tussen techniek & commercie</li>
+          </ul>
+        </aside>
+      </div>
+
+      <div id="diensten" style="margin-top:28px">
+        <div class="services">
+          <div class="service">
+            <h3>Inkoop & contracten</h3>
+            <p>Transparante contractoptimalisatie: lagere kosten, geen verrassingen.</p>
+          </div>
+          <div class="service">
+            <h3>Verduurzaming</h3>
+            <p>Batterijen, EMS en laadinfra — praktisch ingericht en realistisch gepland.</p>
+          </div>
+          <div class="service">
+            <h3>Projectregie</h3>
+            <p>Van plan naar uitvoering: ik verbind partijen en houd resultaat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resultaat">
+      <h2 style="color:var(--gold);margin-bottom:10px">Resultaat, geen woorden</h2>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <div style="flex:1;min-width:220px;background:var(--panel);padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)">
+          <strong>Directe kostenbesparing</strong>
+          <p class="small" style="color:var(--muted);margin-top:8px">Concrete verbeteringen in inkoop en contracten met meetbare besparingen.</p>
+        </div>
+        <div style="flex:1;min-width:220px;background:var(--panel);padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)">
+          <strong>Projectdeliverables</strong>
+          <p class="small" style="color:var(--muted);margin-top:8px">Duidelijke planning, KPI’s en verantwoordelijkheid tot oplevering.</p>
+        </div>
+        <div style="flex:1;min-width:220px;background:var(--panel);padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)">
+          <strong>Rust bij directie</strong>
+          <p class="small" style="color:var(--muted);margin-top:8px">Een betrouwbare gesprekspartner die voor resultaat zorgt.</p>
+        </div>
+      </div>
+
+      <div class="testimonials">
+        <div class="quote">
+          <p>“Zijn aanpak is praktisch en to-the-point. Direct resultaat zonder poespas.”</p>
+          <div class="meta">— Klant, Energiebedrijf</div>
+        </div>
+        <div class="quote">
+          <p>“Onafhankelijk advies dat daadwerkelijk meerwaarde levert.”</p>
+          <div class="meta">— Directeur, Industrie</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="over" style="margin-top:40px">
+      <h2 style="color:var(--gold);margin-bottom:10px">Over mij</h2>
+      <div style="background:var(--panel);padding:18px;border-radius:10px;border:1px solid rgba(0,0,0,0.03)">
+        <p style="margin:0;color:var(--text)">Ik ben een onafhankelijke energiespecialist en verbind techniek met commercie. Geen wollige analyses — gewoon doen en laten zien. Beschikbaar voor interim-opdrachten, advies en projectregie.</p>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:36px">
+      <h2 style="color:var(--gold);margin-bottom:10px">Contact</h2>
+      <div style="display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start">
+        <div style="background:var(--panel);padding:18px;border-radius:10px;border:1px solid rgba(0,0,0,0.03)">
+          <p style="margin:0 0 8px;color:var(--muted)">Plan een kort gesprek — in één gesprek weten we of we elkaar kunnen helpen.</p>
+          <p style="margin:0 0 12px"><strong>Email:</strong> info@sourceofquality.nl</p>
+          <p style="margin:0">Of stuur een WhatsApp: <a href="https://wa.me/31612345678" style="color:var(--gold)">+31 6 12 34 56 78</a></p>
+        </div>
+
+        <form style="background:var(--panel);padding:18px;border-radius:10px;border:1px solid rgba(0,0,0,0.03)" onsubmit="event.preventDefault();alert('Bedankt — ik neem contact op.');">
+          <label style="display:block;margin-bottom:8px;color:var(--muted)">Naam</label>
+          <input required style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.04);background:var(--bg);color:var(--panel)" />
+          <label style="display:block;margin:12px 0 8px;color:var(--muted)">Email</label>
+          <input required type="email" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.04);background:var(--bg);color:var(--panel)" />
+          <label style="display:block;margin:12px 0 8px;color:var(--muted)">Bericht</label>
+          <textarea required style="width:100%;min-height:100px;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.04);background:var(--bg);color:var(--panel)"></textarea>
+          <div style="margin-top:12px">
+            <button class="cta" type="submit">Verstuur bericht</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div class="small">© 2025 Source of Quality</div>
+      <div class="small">Privacy — Cookiebeleid</div>
     </div>
-</section>
-
-<section>
-    <h2>Diensten</h2>
-    <div class="card">
-        <ul>
-            <li>Energie‑analyse & contractoptimalisatie</li>
-            <li>Verduurzaming: batterijen, EMS, zonnepanelen, laadinfra</li>
-            <li>Inkoopstrategie met transparantie en zekerheid</li>
-            <li>Projectregie als verbindende schakel</li>
-        </ul>
-    </div>
-</section>
-
-<section>
-    <h2>Contact</h2>
-    <div class="card">
-        <p>Wil je samenwerken of sparren? Neem contact op:</p>
-        <p><strong>Email:</strong> info@sourceofquality.nl</p>
-        <p><strong>Telefoon:</strong> — vul ik nog voor je in als je wil —</p>
-    </div>
-</section>
-
-<footer>
-    <p>© 2025 Source of Quality</p>
-</footer>
+  </footer>
 
 </body>
 </html>
